@@ -1,0 +1,48 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== 训练产物：模型权重 =====
+# classifier.py          -> sst-classifier.pt / cfimdb-classifier.pt
+# multitask_classifier.py -> {mode}-{epochs}-{lr}-multitask.pt
+*.pt
+*.ckpt
+*.safetensors
+
+# ===== 训练产物：预测输出 =====
+# 必须限定在 predictions/ 下，写成 *.csv 会误伤 data/ 里的官方数据集
+predictions/*.csv
+
+# ===== 提交用压缩包（prepare_submit.py 生成）=====
+cs224n_default_final_project_submission.zip
+
+# ===== 密钥与凭据安全网 =====
+*密钥*
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+.env
+.env.*
+*secret*
+*credential*
+*password*
+
+# ===== 系统垃圾 =====
+.DS_Store
+__MACOSX/
+Thumbs.db
+.idea/
+.vscode/
